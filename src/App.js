@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import PriceList from './components/PriceList'
 import ViewTab from './components/ViewTab'
+import MonthPicker from './components/MonthPicker'
 import { LIST_VIEW } from './utility'
 // mock数据
 const items = [
@@ -47,6 +48,11 @@ function App() {
       <ViewTab 
         activeTab={ LIST_VIEW }
         onTabChange={(view) => { alert(view) }}
+      />
+      <MonthPicker 
+        year={2018}
+        month={4}
+        onChange={(year, month) => { console.log(year, month) }}
       />
     </div>
   );
